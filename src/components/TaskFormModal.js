@@ -33,7 +33,7 @@ const TaskFormModal = ({ isOpen, onClose }) => {
             onChange={(e) => setDescription(e.target.value)}
           ></textarea>
           <button type="submit">Add Task</button>
-          <button type="button" onClick={onClose}>Cancel</button>
+          <button class="cancel-button" type="button" onClick={onClose}>Cancel</button>
         </form>
       </div>
     </div>

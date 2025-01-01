@@ -105,10 +105,20 @@
   margin-right: 10px; 
 }
 
-.modal button.cancel {
-  background-color: #f44336;
-  color: white;
+.modal .cancel-button {
+  background-color: #f44336; /* Red background */
+  color: white; /* White text */
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 10px;
 }
+
+.modal .cancel-button:hover {
+  background-color: #e53935; /* Slightly darker red on hover */
+}
+
 
 .search-bar {
   margin-bottom: 20px;
