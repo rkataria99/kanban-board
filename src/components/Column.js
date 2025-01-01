@@ -4,7 +4,7 @@ import { Droppable } from 'react-beautiful-dnd';
 import TaskCard from './TaskCard';
 import './styles.css';
 
-const Column = ({ title, tasks, status }) => {
+const Column = ({ title, tasks, status, onEdit, onDelete }) => {
   return (
     <div className="kanban-column">
       <h3>{title}</h3>
@@ -16,7 +16,13 @@ const Column = ({ title, tasks, status }) => {
             ref={provided.innerRef}
           >
             {tasks.map((task, index) => (
-              <TaskCard key={task.id} task={task} index={index} />
+              <TaskCard
+              key={task.id}
+              task={task}
+              index={index}
+              onEdit={onEdit}
+              onDelete={onDelete}
+            />
             ))}
             {provided.placeholder}
           </div>
